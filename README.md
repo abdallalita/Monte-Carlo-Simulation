@@ -12,7 +12,7 @@ We can use our distribution to create many random but plausible future scenarios
 Combining the results of many scenarios or simulations, we can quantify the chances of an event occurring or the scale of risk we are exposed to as a business.
 Overall the algorithm helps in modelling uncertainty in predictive and forecasting models and it is based on the [Law of Large Numbers](https://www.britannica.com/science/law-of-large-numbers)
 2. ## Stock Prices Forecast
-* [Overview](overview1)
+* [Overview](#overview-1)
 * [Steps](steps-1)
 3. ## Net Income Forecast
 * [Overview](overview-2)
