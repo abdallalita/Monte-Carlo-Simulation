@@ -13,13 +13,13 @@ Combining the results of many scenarios or simulations, we can quantify the chan
 Overall the algorithm helps in modelling uncertainty in predictive and forecasting models and it is based on the [Law of Large Numbers](https://www.britannica.com/science/law-of-large-numbers)
 2. ## Stock Prices Forecast
 * [Overview](#overview-1)
-* [Steps](steps-1)
+* [Steps](#steps-1)
 3. ## Net Income Forecast
-* [Overview](overview-2)
-* [Steps](steps-2)
+* [Overview](#overview-2)
+* [Steps](#steps-2)
 4. ## Value at Risk Forecast
-* [Overview](overview-3)
-* [Steps](steps-3) 
+* [Overview](#overview-3)
+* [Steps](#steps-3) 
 ### Overview 1
 Modelleling the randomness of GOOGL stock price to predict plausible range of stock prices based on 20 years of historical data.
 I used 20 years of data so as to consider the long term economic growtth, however one can choose how far back to go on the sampling method (shorter period of time) especially if we want the price to be mostly affected by current economic growth.
