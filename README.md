@@ -26,11 +26,12 @@ Modelleling the randomness of GOOGL stock price to predict plausible range of st
 I used 20 years of data so as to consider the long term economic growtth, however one can choose how far back to go on the sampling method (shorter period of time) especially if we want the price to be mostly affected by current economic growth.
 
 ---
-### Steps 1
+#### Steps 1
 * Use historical stock prices from [Yahoo Finance](https://finance.yahoo.com/) and calculate daily log returns and statistical measures (mean, standard deviation, drift).
 * The probability distribution of the daily returns will be used to simulate 10,000 price movements over the next 252 days (one trading year stock price movement).
 * Calculate the price progression for each of the simulation to give one final price per simulation and quantify the conclusions (worst, average and best prices) using an appropriate confidence level.
 --- 
+### Net Income forecast
 ### Overview 2
 Instead of three possible scenarios (worst case, common case, best case) to tell a story about how a future might look like, we might consider evaluating a range of cases using unlimited scenarios along with the probabilities of those events occurring.
 With this information, we can make forward looking decisions such as assessing a required budget or come up with an expected view of what the future cashflows would be based on many simulations.
@@ -43,7 +44,8 @@ Here, I shall forecast a certain company's net income based on the Sales (revenu
 * Quantify the Best case, worst case and average case of the net income value. Plot the probability distribution and find the profit range with certain level of confidence.
 
 ---
-### Overview 3
+### Value at Risk forecast
+#### Overview 3
 We may want to calculate the value of an investment that is at risk or have a certain amount of capital set aside to cover at a certain confidence level. This helps us to insure ourselves against the risk we have identified or we might develop a hedging strategy to help mitigate some of the downside we are exposed to.
 Here I shall assess the risk of purchasing 1000, GOOGL shares and holding them for one month ( 30-day historical data)
 
