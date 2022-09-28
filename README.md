@@ -20,7 +20,7 @@ Overall the algorithm helps in modelling uncertainty in predictive and forecasti
 4. ## Value at Risk Forecast
 * [Overview](overview-3)
 * [Steps](steps-3) 
-### Overview 
+### Overview 1
 Modelleling the randomness of GOOGL stock price to predict plausible range of stock prices based on 20 years of historical data.
 I used 20 years of data so as to consider the long term economic growtth, however one can choose how far back to go on the sampling method (shorter period of time) especially if we want the price to be mostly affected by current economic growth.
 
