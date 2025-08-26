@@ -5,7 +5,7 @@
 Gold is one of the most important and actively traded assets in global financial markets. Its price often fluctuates with economic indicators, market indices, and geopolitical events, making both volatility forecasting and price simulation essential for risk management, portfolio allocation, and trading strategies.
 In this project, I use the GARCH(1,1) model (Generalized Autoregressive Conditional Heteroskedasticity) to forecast gold price volatility and then apply a Monte Carlo simulation framework to generate potential future gold price paths based on these forecasts.
 
-objectives are:
+Qbjectives are:
 
 - To capture and predict fluctuations in gold’s returns (volatility modeling).
 - To simulate multiple future price scenarios, quantifying uncertainty and potential risks (Monte Carlo simulation).
@@ -119,7 +119,7 @@ This project demonstrates the integration of **statistical volatility modeling (
 - GARCH successfully modeled conditional volatility and captured clustering.
 - Monte Carlo extended the analysis to simulate multiple future price paths, providing probabilistic insight into risks and opportunities.
   
---
+---
 
 2. ## Stock Prices Forecast
 * [Overview](#overview-1)
