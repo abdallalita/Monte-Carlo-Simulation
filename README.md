@@ -1,5 +1,5 @@
 # Table of Contents
-# [Bitcoin Volatility Forecasting](#Introduction)
+# [Gold Price Forecasting](#Introduction)
 
 ## Introduction
 Gold is one of the most important and actively traded assets in global financial markets. Its price often fluctuates with economic indicators, market indices, and geopolitical events, making both volatility forecasting and price simulation essential for risk management, portfolio allocation, and trading strategies.
