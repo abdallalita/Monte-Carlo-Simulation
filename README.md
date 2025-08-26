@@ -1,4 +1,127 @@
 # Table of Contents
+# [Bitcoin Volatility Forecasting](#Introduction)
+
+## Introduction
+Gold is one of the most important and actively traded assets in global financial markets. Its price often fluctuates with economic indicators, market indices, and geopolitical events, making both volatility forecasting and price simulation essential for risk management, portfolio allocation, and trading strategies.
+In this project, I use the GARCH(1,1) model (Generalized Autoregressive Conditional Heteroskedasticity) to forecast gold price volatility and then apply a Monte Carlo simulation framework to generate potential future gold price paths based on these forecasts.
+
+objectives are:
+
+- To capture and predict fluctuations in gold’s returns (volatility modeling).
+- To simulate multiple future price scenarios, quantifying uncertainty and potential risks (Monte Carlo simulation).
+
+This combination allows traders, investors, and risk managers to assess not only expected volatility but also the range of possible price outcomes under different scenarios.
+
+## Dataset
+- Observations: 1718 daily records
+- Source: Yahoo Finance
+- Period: November 18, 2011 – January 1, 2019
+- Columns: Date and Adjusted Closing Price
+
+## Data Preprocessing
+- Checked for duplicates → None found.
+- Sorted dates chronologically to ensure time-series integrity.
+- No missing values detected.
+- Computed log returns to transform raw prices into a stationary series suitable for volatility modeling.
+
+## Exploratory Data Analysis (EDA)
+Key findings before applying the model:
+
+1. Price Trends: Gold prices showed a downward trend across the sample. Since raw prices are non-stationary, we model log returns instead.
+
+2. Returns: Log returns oscillate around zero with no visible trend; ADF test confirmed stationarity.
+
+3. Volatility Clustering: Periods of high volatility followed by high volatility, low by low → a hallmark feature justifying GARCH use.
+
+4. Autocorrelation: Significant autocorrelation in squared returns (via ACF and Ljung-Box test) supports GARCH suitability.
+
+5. Summary Statistics:
+
+Mean approximately 0 hence no drift.
+
+Std. Dev. approximately 2.45% → moderate volatility.
+
+Extreme shocks between -11.31% and +12.00%.
+
+Slightly positive skewness.
+
+6. Return Distribution: Leptokurtic (fat tails), confirming extreme moves occur more often than under normal distribution.
+
+## Volatility Modeling with GARCH(1,1)
+Chosen model: GARCH(1,1) because it balances simplicity and strong empirical performance.
+
+Variance depends on both past shocks (ARCH term) and past volatility (GARCH term).
+
+- Diagnostics
+
+Residuals: No significant autocorrelation remained (ACF + Ljung-Box test).
+
+ARCH Effects: ARCH-LM test confirmed no residual heteroskedasticity.
+
+Parameters: All statistically significant; α + β approximately to 1 indicates persistence in volatility.
+
+## Model Validation
+
+Rolling window forecasts: Ensures adaptability to changing market conditions.
+
+Results: Forecasted vs realized volatility tracked each other closely.
+
+Confirms GARCH(1,1) captured volatility clustering effectively.
+
+## Evaluation Metrics
+
+MAE: Forecast errors were small on average.
+
+MSE: Penalized large errors, remained low.
+
+QLIKE: Low value, tailored for volatility forecast evaluation.
+
+All metrics confirmed reliable volatility forecasts.
+
+## Monte Carlo Price Simulation
+
+Building on the volatility estimates, I simulated 5000 of possible future gold price paths:
+
+1. Inputs:
+
+- Drift (average return trend).
+
+- Volatility from GARCH forecasts.
+
+- Residuals modeled with a Student’s t distribution to account for fat tails.
+
+2. Simulation:
+
+- Generated many scenarios for gold prices over the test period.
+
+- Summarized with percentiles (P5, P25, P50, P75, P95).
+
+3. Results (Fan Chart):
+
+- P5–P95 (90% band): 90% of simulated paths fell within this interval each day.
+
+- P25–P75 (50% band): Central scenarios capturing half of all paths.
+
+- Actual prices (black line): Stayed within the 90% band throughout, confirming the model captured uncertainty well.
+
+- Median forecast (P50): Slight downward trend, suggesting mild expected decline.
+
+- Upper band (P95): Bullish case, prices up to approximately 27.5.
+
+- Lower band (P5): Bearish case, potential drop to approximately 12.5.
+
+## Interpretation:
+The simulation provides not just a single point forecast but a range of possible futures, allowing traders and risk managers to evaluate both optimistic and pessimistic outcomes. The widening bands over time represent growing uncertainty the further out we forecast.
+
+## Conclusion
+This project demonstrates the integration of **statistical volatility modeling (GARCH)** with **Monte Carlo Somulation** to provide a richer picture of gold price dynamics:
+
+- GARCH successfully modeled conditional volatility and captured clustering.
+- Monte Carlo extended the analysis to simulate multiple future price paths, providing probabilistic insight into risks and opportunities.
+--
+
+
+
 1. ## General Description
 Monte Carlo Simulation is a computational algorithm which relies on repeated random sampling to create a representative view of the future.
 It entails the following four steps to achieve results:
