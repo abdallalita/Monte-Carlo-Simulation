@@ -118,22 +118,9 @@ This project demonstrates the integration of **statistical volatility modeling (
 
 - GARCH successfully modeled conditional volatility and captured clustering.
 - Monte Carlo extended the analysis to simulate multiple future price paths, providing probabilistic insight into risks and opportunities.
+  
 --
 
-
-
-1. ## General Description
-Monte Carlo Simulation is a computational algorithm which relies on repeated random sampling to create a representative view of the future.
-It entails the following four steps to achieve results:
-* Observations
-Analyzing historical data to describe past movements of a variable with the help of a probability distribution (statistical measures), which describes past behaviour.
-* Distributions
-Once we understand the past behaviour, we can approximate the distribution of future behaviour. However if we don't have any observations of this past behaviour, we can select an appropriate distribution based on the knowledge that we have
-* Simulations
-We can use our distribution to create many random but plausible future scenarios. Repeating this process over and over again is the key to making confident predictions.
-* Quantifications
-Combining the results of many scenarios or simulations, we can quantify the chances of an event occurring or the scale of risk we are exposed to as a business.
-Overall the algorithm helps in modelling uncertainty in predictive and forecasting models and it is based on the [Law of Large Numbers](https://www.britannica.com/science/law-of-large-numbers)
 2. ## Stock Prices Forecast
 * [Overview](#overview-1)
 * [Steps](#steps-1)
