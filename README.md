@@ -29,11 +29,11 @@ Key findings before applying the model:
 
 1. Price Trends: Gold prices showed a downward trend across the sample. Since raw prices are non-stationary, we model log returns instead.
 2. Returns: Log returns oscillate around zero with no visible trend; ADF test confirmed stationarity.
-3. Volatility Clustering: Periods of high volatility followed by high volatility, low by low → a hallmark feature justifying GARCH use.
+3. Volatility Clustering: Periods of high volatility followed by periods of high volatility, and vice versa, a feature justifying GARCH use.
 4. Autocorrelation: Significant autocorrelation in squared returns (via ACF and Ljung-Box test) supports GARCH suitability.
 5. Summary Statistics:
 Mean approximately 0 hence no drift.
-Std. Dev. approximately 2.45% → moderate volatility.
+Std. Dev. approximately 2.45% hence moderate volatility.
 Extreme shocks between -11.31% and +12.00%.
 Slightly positive skewness.
 6. Return Distribution: Leptokurtic (fat tails), confirming extreme moves occur more often than under normal distribution.
